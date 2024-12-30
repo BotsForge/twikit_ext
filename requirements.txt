@@ -1,0 +1,6 @@
+proxystr>=2.1.3
+twikit>=2.2.0
+loguru
+requests
+pydantic
+httpx
