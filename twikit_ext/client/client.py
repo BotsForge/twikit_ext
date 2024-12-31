@@ -62,8 +62,8 @@ class Client(OriginalClient):
         self.profile = profile if isinstance(profile, Profile) else Profile(**profile)
         self.me: User = None
 
-        if profile.proxy:
-            self._proxy = profile.proxy
+        if self.profile.proxy:
+            self._proxy = self.profile.proxy
         elif proxy:
             self._proxy = Proxy(proxy)
         else:
@@ -82,7 +82,7 @@ class Client(OriginalClient):
         self.client_transaction = ClientTransaction()
 
         self._token = TOKEN
-        self._user_id = profile.user_id
+        self._user_id = self.profile.user_id
         self._user_agent = user_agent
         self._act_as = None
 
