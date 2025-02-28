@@ -372,7 +372,7 @@ class Client(OriginalClient):
 
         await flow.execute_task(params={'flow_name': 'login'}, data=pl.FlowLoginStartData.construct())
         await flow.sso_init('apple')
-        await flow.execute_task(pl.LoginJsInstrumentationSubtask.construct(await self._ui_metrix()))
+        await flow.execute_task(pl.LoginJsInstrumentationSubtask.construct(await self._ui_metrics()))
 
         await flow.execute_task(pl.LoginEnterUserIdentifierSSO.construct(auth_info_1))
 

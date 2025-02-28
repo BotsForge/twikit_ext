@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "twikit_ext"
-version = "0.0.1"
+version = "0.0.2"
 description = "Twitter api client. Extended twikit"
 authors = ["MrSmith06 <sletars@gmail.com>"]
 license = "MIT"
